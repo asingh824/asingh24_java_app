@@ -1,4 +1,4 @@
-@Library('my-shared-library') _
+//@Library('my-shared-library') _
 pipeline{
 
     agent any
@@ -8,7 +8,8 @@ pipeline{
 
             steps{
                 gitCheckout(
-                    git branch: 'main', url: 'https://github.com/asingh824/asingh24_java_app.git'
+                    git branch: 'main', 
+                    url: 'https://github.com/asingh824/asingh24_java_app.git'
                 )
             }
         }
