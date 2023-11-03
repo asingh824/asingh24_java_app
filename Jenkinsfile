@@ -1,4 +1,4 @@
-//@Library('my-shared-library') _
+@Library('JENKINS_SHARED_LIB1') _
 
 pipeline{
 
@@ -8,30 +8,14 @@ pipeline{
     stages{
          
         stage('Git Checkout'){
-                    when { expression {  params.action == 'create' } }
-            steps{
+        steps{
+            script{
             gitCheckout(
                 branch: "main",
                 url: "https://github.com/asingh824/asingh24_java_app.git"
             )
             }
-        }
-    }
-
-
-
-
-/*
-       stages{
-         
-        stage('Git Checkout'){
-            steps{
-                script{
-                    git branch: 'main', url: 'https://github.com/asingh824/asingh24_java_app.git'
-                }
             }
         }
     }
 }
-*/
-    
