@@ -10,7 +10,7 @@ pipeline{
             steps{
             gitCheckout(
                 gitCheckout(
-                    branch: "main"
+                    branch: "main",
                     url: "https://github.com/asingh824/asingh24_java_app.git"
                 )
             )
