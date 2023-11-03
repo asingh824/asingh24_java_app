@@ -4,16 +4,17 @@ pipeline{
 
     agent any
 
-    stages{
+       stages{
+         
         stage('Git Checkout'){
-
+                    when { expression {  params.action == 'create' } }
             steps{
-                gitCheckout(
-                    branch: "main",
-                    url: "https://github.com/asingh824/asingh24_java_app.git"
-                )
-            }
+            gitCheckout(
+                branch: "main",
+                url: "https://github.com/asingh824/asingh24_java_app.git"
+            )
         }
-    } 
+    }
+    }
 }
     
